@@ -1,27 +1,45 @@
 # MessagingSystemFrontend
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+This repository contains the frontend for the messaging system, which is developed using the Angular framework. 
+The frontend communicates with the backend, providing a user interface for interacting with the messaging system.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#Prerequisites
+Before you proceed, make sure you have the following installed on your local machine:
 
-## Code scaffolding
+  ##Node.js: 
+  Ensure that you have Node.js installed. You can download it from Node.js official website.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  ##Angular CLI:
+  Install the Angular CLI globally using the following command:
+         bash : *npm install -g @angular/cli*
 
-## Build
+ ##Backend Server:
+ Make sure the messaging system backend is set up and running. 
+ Follow the instructions in the messaging system backend repository's README to configure and start the backend server.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+# Getting Started
+Follow these steps to set up and run the messaging system frontend on your local machine:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ ##Clone the Repository:
+   bash: git clone *https://github.com/your-username/messaging-system-frontend.git*
 
-## Running end-to-end tests
+##Navigate to the Project Directory:
+  bash : cd messaging-system-frontend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+##Install Dependencies:
+  bash :*npm install*
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Run the Application:
+  bash :ng serve
+  The application will be accessible at http://localhost:4200 by default.
+
+##Access the Messaging System:
+   Open your web browser and navigate to http://localhost:4200 to use the messaging system frontend.
+
+##Additional Information
+  Ensure that the backend server is running before accessing the frontend.
+  For API documentation and backend features, refer to the backend repository's README.
+    Explore the messaging system features and functionalities through the intuitive user interface.
