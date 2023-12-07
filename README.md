@@ -23,7 +23,7 @@ Before you proceed, make sure you have the following installed on your local mac
 Follow these steps to set up and run the messaging system frontend on your local machine:
 
  ## Clone the Repository:
-   bash: git clone *https://github.com/maronmurangiri/messaging-system-frontend.git)*
+   bash: git clone *https://github.com/maronmurangiri/messaging-system-frontend.git*
 
 ## Navigate to the Project Directory:
   bash : cd messaging-system-frontend
