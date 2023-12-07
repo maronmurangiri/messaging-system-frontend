@@ -1,0 +1,113 @@
+
+h1 {
+  /*font-size: 24px;*/
+  color: #32a852;
+  margin-bottom: 30px; 
+}
+
+/* Style the h2 element */
+h3 {
+  /*font-size: 20px; */
+  color: #32a852; 
+  margin-bottom: 15px; 
+}
+
+button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+/* Style the search form */
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style the search label */
+form label {
+  margin-right: 10px;
+color: #328ba8;
+}
+
+/* Style the search input */
+form input {
+  padding: 8px;
+}
+
+/* Style the search button */
+form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Center align the search results */
+.search-results-table {
+  margin: 0 auto;
+
+}
+.search{
+  margin-top: 230px;
+}
+
+/* Style the message tables */
+.message-table, .search-results-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.message-table th, .message-table td, .search-results-table th, .search-results-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style the response form */
+#responseText, #status, #cannedResponses {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* Style the response form buttons */
+#responseForm button {
+  background-color: #323aa8;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.save-canned-message-container {
+  position: absolute;
+  top: 20;
+  right: 0;
+  margin: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-message-container {
+  top: 20;
+  position: absolute;
+  margin: 20px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.messages-table{
+  /*top: 50px;*/
+  margin-top: 250px;
+}

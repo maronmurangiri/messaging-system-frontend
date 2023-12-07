@@ -1,0 +1,95 @@
+<h1>Welcome to the agent dashboard</h1>
+<div>
+  <button (click)="logout()">Logout</button>
+
+<!-- search form -->
+<div class="search-message-container">
+<h3>Search for Messages by keyword</h3>
+<form (ngSubmit)="searchMessages()" [formGroup]="searchForm">
+  <label>Search Keyword:</label>
+     <input type="text" formControlName="keyword" placeholder="Enter the keyword" />
+  <button type="submit">Search</button>
+</form>
+</div>
+
+<div class="save-canned-message-container">
+  <h3>Save Canned Message</h3>
+  <form (ngSubmit)="saveCannedMessage(cannedMessageForm.value)" #cannedMessageForm="ngForm">
+    <label for="content">Canned Message Content:</label>
+    <input type="text" id="content" name="content" ngModel required>
+    <button type="submit">Save Canned Message</button>
+  </form>
+</div>
+
+<!-- Display search results -->
+<div class="search" *ngIf="searchResults.length > 0">
+  <h3>Search Results:</h3>
+  <table class="search-results-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Content</th>
+        <th>Created Time</th>
+        <th>Priority</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of searchResults">
+        <td>{{ result.id }}</td>
+        <td>{{ result.message }}</td>
+        <td>{{ result.createdTime | date: 'medium' }}</td>
+        <td>{{ result.priority }}</td>
+        <td>{{ result.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <!-- Display the list of messages -->
+  <div class="messages-table">
+  <h3>Messages assigned to you</h3>
+  <table class="message-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Message</th>
+        <th>Created Time</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages">
+        <td>{{ message.id }}</td>
+        <td>{{ message.message }}</td>
+        <td>{{ message.createdTime | date: 'medium' }}</td>
+        <td>
+          
+          <button style="background-color: #007bff;" *ngIf="!respondedMessages[message.id]" (click)="respondToMessage(message)">Respond</button>
+        <span *ngIf="respondedMessages[message.id]">✓</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- Display the response form -->
+  <div *ngIf="showResponseForm">
+    <h3>Respond to Message</h3>
+    <form (ngSubmit)="submitResponse()">
+      <label for="responseText">Response:</label>
+      <textarea id="responseText" name="responseText" [(ngModel)]="responseText" required></textarea>
+      <label for="status">Status:</label>
+    <input type="text" id="status" name="status" [(ngModel)]="status">
+    <label for="cannedResponses">Canned Responses:</label>
+    <select class="custom-select" id="cannedResponses" name="cannedResponses" [(ngModel)]="selectedCannedResponse">
+      <option *ngFor="let cannedResponse of cannedResponses" [ngValue]="cannedResponse.id">{{ cannedResponse.content }}</option>
+    </select>
+
+      <button type="submit">Submit Response</button>
+    </form>
+  </div>
+
+  
+</div>

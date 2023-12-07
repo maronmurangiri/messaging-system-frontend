@@ -1,0 +1,100 @@
+/* customer-dashboard.component.css */
+
+/*.message-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .message-table th, .message-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .message-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .message-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  */
+
+
+  h2 {
+    color: #32a852; /* Set text color */
+    text-align: center; /* Center the text */
+  }
+  
+  /* Style the logout button */
+  button {
+    background-color: #dc3545; /* Set button background color */
+    color: #fff; /* Set button text color */
+    padding: 10px 15px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    margin-bottom: 20px; /* Add bottom margin */
+    cursor: pointer; /* Add pointer cursor on hover */
+    
+  }
+  
+  /* Style the form container */
+  form {
+    max-width: 400px; /* Set maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  /* Style the form labels and inputs */
+  label {
+    display: block; /* Make labels block-level for easier styling */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+  
+  input {
+    width: 100%; /* Make text boxes full width */
+    padding: 8px; /* Add padding to text boxes */
+    box-sizing: border-box; /* Include padding and border in box model */
+    margin-bottom: 15px; /* Add bottom margin */
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #007BFF; /* Set button background color */
+  }
+  
+  /* Style the paragraph */
+  p {
+    color: #555; /* Set text color */
+    text-align: center; /* Center the text */
+    margin-top: 15px; /* Add top margin */
+  }
+  
+  /* Style the message table */
+  .message-table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Collapse border spacing */
+    margin-top: 20px; /* Add top margin */
+  }
+  
+  /* Style the table headers */
+  .message-table th {
+    background-color: #007BFF; /* Set header background color */
+    color: #fff; /* Set header text color */
+    padding: 10px; /* Add padding to headers */
+  }
+  
+  /* Style the table cells */
+  .message-table td {
+    border: 1px solid #ddd; /* Add border to cells */
+    padding: 8px; /* Add padding to cells */
+  }
+  
+  /* Style the odd rows */
+  .message-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Set odd row background color */
+  }
+  
+  /* Style the response column */
+  .message-table td:nth-child(5) {
+    min-width: 150px; /* Set minimum width for response column */
+  }

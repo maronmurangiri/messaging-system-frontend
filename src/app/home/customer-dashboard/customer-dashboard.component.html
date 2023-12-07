@@ -1,0 +1,41 @@
+<!-- customer-dashboard.component.html -->
+<div>
+  <h2>Welcome to the Customer Dashboard!</h2>
+
+  <button (click)="logout()">Logout</button>
+  <!-- Form to send a message -->
+  <form (submit)="sendMessage()">
+      <label for="message">Send a Message:</label>
+      <input type="text" id="message" [(ngModel)]="newMessage" name="message" required />
+      <button type="submit">Send</button>
+  </form>
+
+ <!-- Display the list of messages in a table -->
+<div *ngIf="messages && messages.length > 0">
+  <h3>Your Messages:</h3>
+  <table class="message-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Message</th>
+        <th>Created Time</th>
+        <th>Status</th>
+        <th *ngIf="hasResponses()">Response</th>
+        <!-- Add other columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages">
+        <td>{{ message.id }}</td>
+        <td>{{ message.message }}</td>
+        <td>{{ message.createdTime | date:'medium' }}</td>
+        <td>{{ message.status }}</td>
+        <td *ngIf="hasResponses()">{{ message.response }}</td>
+        <!-- Add other cells for additional details -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</div>
